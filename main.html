@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Story Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <a href="#main"><h1>Random Story Generator</h1></a>
+        </nav>
+    </header>
+    <main id="main">
+        <aside class="right">
+            <h3>Tips for Fun Stories:</h3>
+            <ul>
+                <li>Choose creative words!</li>
+                <li>Mix adjectives and nouns.</li>
+                <li>Think of unique actions.</li>
+            </ul>
+        </aside>
+        <div class="interactive">
+            <h2>Interactive Section</h2>
+            <p>Enter three words to create your own random story:</p>
+            <input id="word1" type="text" placeholder="Word 1" required>
+            <input id="word2" type="text" placeholder="Word 2" required>
+            <input id="word3" type="text" placeholder="Word 3" required>
+            <br>
+            <button onclick="generateStory()">Generate Story</button>
+            <div id="storyDisplay" class="story-display">
+                <h3>Your Random Story:</h3>
+                <p>Start generating your story by entering words above!</p>
+            </div>
+        </div>
+        <aside class="left">
+            <h3>About This Project:</h3>
+            <p>This tool generates random stories based on your input. Be creative and have fun!</p>
+        </aside>
+    </main>
+    <footer>
+        &copy; 2024 Random Story Generator | Built with HTML, CSS, and JavaScript
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

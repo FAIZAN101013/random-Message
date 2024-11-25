@@ -1,0 +1,186 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    
+}
+
+header nav a:hover {
+    color: #ffd700;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+/* Interactive Section */
+main > .interactive {
+    flex: 2;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+main > .interactive:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+main .right ul{
+    list-style-type: none ;
+}
+/* Sidebars */
+main > .right, main > .left {
+    flex: 0.8;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    min-width: 180px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out;
+}
+
+main > .right:hover, main > .left:hover {
+    background-color: #e6f0ff;
+    transition: background-color 0.3s ease;
+}
+
+/* Story Display */
+.story-display {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #007bff;
+    background-color: #e6f0ff;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease;
+}
+
+/* Inputs and Buttons */
+main input {
+    padding: 10px;
+    margin: 10px 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    transition: border-color 0.3s ease;
+}
+
+main input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+main button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+main button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4a90e2;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main > .interactive, main > .right, main > .left {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    main input {
+        width: 95%;
+    }
+}
